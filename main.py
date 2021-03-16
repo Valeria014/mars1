@@ -12,27 +12,6 @@ def index_of_index():
     return "И на Марсе будут яблони цвести!"
 
 
-@app.route('/countdown')
-def countdown():
-    countdown_list = [str(x) for x in range(10, 0, -1)]
-    countdown_list.append('Пуск!')
-    return '</br>'.join(countdown_list)
-
-
-@app.route('/sample_page')
-def return_sample_page():
-    return f"""<!doctype html>
-                <html lang="en">
-                  <head>
-                    <meta charset="utf-8">
-                    <link rel="stylesheet" type="text/css" href="{url_for('static', filename='css/style.css')}" />
-                    <title>Привет, Яндекс!</title>
-                  </head>
-                  <body>
-                    <h1>Первая HTML-страница</h1>
-                  </body>
-                </html>"""
-
 
 @app.route("/promotion")
 def promoution():
